@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <button
+    className="sc-bcPKhP buQGRn"
+  >
+    Normal Button 
+  </button>
+  <button
+    className="sc-bcPKhP sc-grXZZQ buQGRn blgqjQ"
+  >
+     Tomato Button 
+  </button>
+</div>
+`;
