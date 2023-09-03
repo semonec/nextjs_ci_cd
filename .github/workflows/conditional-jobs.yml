@@ -3,7 +3,7 @@ on: push
 jobs:
   run_on_main:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name == "main" }}
+    if: github.ref_name == "main"
     steps:
       - run: echo "Run on main branch"
   skip_when_test_commit:
