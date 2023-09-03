@@ -1,0 +1,9 @@
+#같은 job 안에서는 share가 가능
+name: Share data between steps
+on: push
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+    	- run: echo 'Hello, Github Actions!' > hello.txt
+        - run: cat hello.txt
