@@ -1,0 +1,11 @@
+#Continue-on-error 속성으로 다음 step을 수행시킴
+name: Continue on error step
+on: push
+jobs:
+  ignore:
+    runs-on: ubuntu-latest
+    steps:
+      - id: go-over
+        continue-on-error: true
+        run: exit 1
+      - run: echo "always Executed"
