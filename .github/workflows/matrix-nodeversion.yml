@@ -1,0 +1,14 @@
+# print node version
+name: Matrix Jobs - node version
+on: push
+jobs:
+  date:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 16]
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version  }}
+      - run: echo ${{ matrix.node-version }}
