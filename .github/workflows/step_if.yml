@@ -1,0 +1,15 @@
+# step 내 if 사용
+name: Conditional step 
+on: push
+jobs:
+  zeroone:
+    runs-on: ubuntu-latest
+    steps:
+      - id: rand
+        run: echo "num=$(($RANDOM % 3))" >> "$GITHUB_OUTPUT"
+      - if: steps.rand.outputs.num == 0
+        run: echo "0"
+      - if: steps.rand.outputs.num == 1
+        run: echo "1"
+      - if: steps.rand.outputs.num == 2
+        run: echo "2"
