@@ -1,0 +1,14 @@
+name: Matrix Jobs
+on: push
+jobs:
+  date:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+    steps:
+      - run: date
+      - run: echo ${{ matrix.os }}
