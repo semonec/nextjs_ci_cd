@@ -1,0 +1,11 @@
+# Build 여부와 unit test 수행
+name: Build and Test
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
