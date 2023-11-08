@@ -17,7 +17,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
-      - name: Restore cached Next.js
+      - name: Store Next.js cache
         id: cache-nextjs-save
         uses: actions/cache/save@v3
         with:
